@@ -7,7 +7,7 @@ showConfirmAction(
   String title,
   context,
 ) {
-  if (!Platform.isAndroid) {
+  if (Platform.isAndroid) {
     showDialog(
       context: context,
       builder: (context) {
@@ -42,7 +42,7 @@ showConfirmAction(
         );
       },
     );
-  } else {
+  } else if (Platform.isIOS) {
     showDialog(
       context: context,
       builder: (context) {
