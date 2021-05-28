@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      drawer: SizedBox(),
+      drawer: Drawer(),
       body: _body(),
     );
   }
@@ -77,13 +77,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   String? _validateInputTask(String? text) {
-    if (text!.isEmpty) return 'Informe o nome da tarefa';
+    if (text!.trim().isEmpty) return 'Informe o nome da tarefa';
   }
 
   _onChangedTask(int index) {
-    setState(() {
-      tasks[index].completed = !tasks[index].completed;
-    });
+    tasks[index].completed = !tasks[index].completed;
+
+    setState(() {});
   }
 
   _onClickAdd() {

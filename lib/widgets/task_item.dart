@@ -17,7 +17,7 @@ class TaskItem extends StatelessWidget {
       background: Container(
         padding: EdgeInsets.only(left: 16),
         alignment: Alignment.centerLeft,
-        color: Colors.red,
+        color: Theme.of(context).disabledColor,
         child: Icon(
           Icons.delete,
           color: Colors.white,
